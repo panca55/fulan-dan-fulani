@@ -1,0 +1,1167 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: gray;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(70, 70, 70);
+}
+/* all similar content styling codes */
+section {
+  padding: 100px 0;
+}
+.max-width {
+  max-width: 5000px;
+  padding: 0 80px;
+  margin: auto;
+}
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+  font-family: "Poppins", sans-serif;
+}
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background-color: rgb(233, 198, 151);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0.13rem 0.3rem rgb(122, 98, 66);
+}
+.navbar.sticky .logo span {
+  color: black;
+  font-weight: bold;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo span {
+  color: black;
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: black;
+}
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+/* menu btn styling */
+.menu-btn {
+  color: black;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.navbar.sticky .menu-btn {
+  color: black;
+  font-weight: bold;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 80px;
+  width: 80px;
+  background: rgb(233, 198, 151);
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #000;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 1000px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  filter: brightness(100%);
+}
+
+.scroll-up-btn.show {
+  width: 40px;
+  height: 45px;
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover {
+  filter: brightness(90%);
+  transform: scale3d(1, 1, 1);
+}
+.scroll-up-btn:active {
+  transform: scale3d(0, 0, -1);
+}
+/* home section styling */
+.home {
+  display: flex;
+  background: url("https://i.postimg.cc/dVysBzfn/foto-nikah-2.jpg") no-repeat
+    center;
+  height: 100vh;
+  color: #fff;
+  min-height: 320px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+/* about section styling */
+.about {
+  width: 100%;
+  background-color: wheat;
+}
+.foto-pria {
+  margin-left: 5%;
+  width: 150px;
+  height: 200px;
+}
+.foto-pria img {
+  height: 240px;
+  width: 180px;
+  padding-bottom: 40px;
+}
+.pria {
+  text-align: start;
+}
+.pria h1,
+.pria p {
+  margin-left: 20px;
+}
+.foto-wanita {
+  margin-left: 70%;
+  width: 150px;
+  height: 200px;
+}
+.foto-wanita img {
+  padding-bottom: 40px;
+  height: 240px;
+  width: 180px;
+}
+.wanita {
+  text-align: end;
+}
+.wanita h1,
+.wanita p {
+  margin-right: 20px;
+}
+.dengan {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* services section styling */
+.services,
+.teams {
+  background: white;
+}
+.kisah h1 {
+  text-align: center;
+  color: black;
+}
+.kisah p {
+  text-align: center;
+  color: black;
+}
+.foto1 {
+  margin-left: 5%;
+  background-color: white;
+  height: 240px;
+  width: 180px;
+}
+.foto1 span {
+  padding-left: 62px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.foto2 {
+  margin-left: 60%;
+  background-color: white;
+  height: 240px;
+  width: 180px;
+}
+.foto2 span {
+  padding-left: 62px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.foto3 {
+  margin-left: 5%;
+  background-color: white;
+  height: 240px;
+  width: 180px;
+}
+.foto3 span {
+  padding-left: 62px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.foto4 {
+  margin-left: 60%;
+  background-color: white;
+  height: 240px;
+  width: 180px;
+}
+.foto4 span {
+  padding-left: 62px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* skills section styling */
+.skills .doa img {
+  width: 500px;
+  height: 600px;
+}
+.skills {
+  margin-top: 80px;
+}
+/* akad section styling */
+.akad img {
+  width: 400px;
+  height: 300px;
+  margin-top: -43px;
+}
+.akad {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+}
+/* resepsi section styling */
+.resepsi img {
+  width: 400px;
+  height: 300px;
+  margin-top: -43px;
+}
+.resepsi {
+  background-color: wheat;
+  width: 100%;
+  height: 350px;
+}
+
+/* footer section styling */
+footer {
+  background: wheat;
+  padding: 15px 23px;
+  text-align: center;
+}
+footer span {
+  color: black;
+  font-family: "lucida calligraphy";
+}
+footer span a {
+  color: rgb(33, 20, 220);
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* responsive media query start */
+@media (max-width: 1400px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 82%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita h1,
+  .wanita p {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 78%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 78%;
+    background-color: wheat;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    background-color: wheat;
+    height: 240px;
+    width: 180px;
+  }
+  .home .home-content .img img {
+    margin-left: 80%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 1300px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 75%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 70%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 70%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+  .home .home-content .img img {
+    margin-left: 40%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 1200px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 71%;
+    width: 150px;
+    height: 200px;
+  }
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+  .home .home-content .img img {
+    margin-left: 45%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 68%;
+    width: 150px;
+    height: 200px;
+  }
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+  .home .home-content .img img {
+    margin-left: -40%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 991px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 66%;
+    width: 150px;
+    height: 200px;
+  }
+  .max-width {
+    padding: 0 0px;
+  }
+  .home .home-content .img {
+    margin-left: 65%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 947px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 72%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 65%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 65%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: rgb(233, 198, 151);
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .home .home-content .text-2 {
+    font-size: 70px;
+  }
+  .home .home-content .img img {
+    margin-left: -120%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 840px) {
+  .menu-btn {
+    margin-right: 20px;
+  }
+  .navbar .logo span {
+    margin-left: 20px;
+  }
+  .navbar.sticky span {
+    margin-left: 20px;
+  }
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 71%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 64%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 64%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+}
+@media (max-width: 690px) {
+  .foto-pria {
+    margin-left: 5%;
+    width: 150px;
+    height: 200px;
+  }
+  .foto-wanita {
+    margin-left: 62%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 57%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 57%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  .max-width {
+    padding: 0 23px;
+  }
+  .home .home-content .img img {
+    margin-left: -130%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .foto-pria {
+    margin-left: 6%;
+    width: 150px;
+    height: 200px;
+  }
+  .pria h1,
+  .pria p {
+    margin-left: 30px;
+  }
+  .foto-wanita {
+    margin-left: 58%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 30px;
+  }
+  .home .home-content .img img {
+    margin-left: -155%;
+    position: relative;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    margin-top: -15px;
+  }
+  .navbar.sticky {
+    margin-top: -5px;
+  }
+  section {
+    width: 500px;
+  }
+  .home {
+    width: 512px;
+    background: url("https://i.postimg.cc/nhqk6r89/foto-nikah-5.jpg") no-repeat
+      center;
+    height: 120vh;
+    margin-top: 0px;
+  }
+  .about {
+    width: 512px;
+  }
+  .akad {
+    width: 512px;
+  }
+  .resepsi {
+    width: 512px;
+  }
+  footer {
+    width: 512px;
+  }
+
+  .foto-pria {
+    margin-left: 6%;
+    width: 150px;
+    height: 200px;
+  }
+  .pria h1,
+  .pria p {
+    margin-left: 30px;
+  }
+  .foto-wanita {
+    margin-left: 60%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  .home .home-content .img img {
+    margin-left: -180%;
+    position: relative;
+    align-items: center;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+@media (max-width: 450px) {
+  .navbar {
+    margin-top: 0px;
+  }
+  .navbar.sticky {
+    margin-top: 0px;
+  }
+  section {
+    width: 500px;
+  }
+  .home {
+    width: 500px;
+    background: url("https://i.postimg.cc/nhqk6r89/foto-nikah-5.jpg") no-repeat
+      center;
+    height: 120vh;
+    margin-top: 0px;
+  }
+  .services {
+    margin-top: -120px;
+  }
+  .about {
+    width: 500px;
+  }
+  .akad {
+    width: 500px;
+  }
+  .resepsi {
+    width: 500px;
+  }
+  footer {
+    width: 500px;
+  }
+
+  .foto-pria {
+    margin-left: 6%;
+    width: 150px;
+    height: 200px;
+  }
+  .pria h1,
+  .pria p {
+    margin-left: 30px;
+  }
+  .foto-wanita {
+    margin-left: 60%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  body {
+    margin-right: -35px;
+    width: auto;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+@media (max-width: 400px) {
+  .navbar {
+    margin-top: -5px;
+  }
+  .navbar.sticky {
+    margin-top: -5px;
+  }
+  section {
+    width: 500px;
+  }
+  .home {
+    width: 500px;
+    background: url("https://i.postimg.cc/nhqk6r89/foto-nikah-5.jpg") no-repeat
+      center;
+    height: 120vh;
+    margin-top: 0px;
+  }
+  .about {
+    width: 500px;
+  }
+  .akad {
+    width: 500px;
+  }
+  .resepsi {
+    width: 500px;
+  }
+  footer {
+    width: 500px;
+  }
+
+  .foto-pria {
+    margin-left: 6%;
+    width: 150px;
+    height: 200px;
+  }
+  .pria h1,
+  .pria p {
+    margin-left: 30px;
+  }
+  .foto-wanita {
+    margin-left: 60%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  body {
+    margin-right: -35px;
+    width: auto;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+@media (max-width: 350px) {
+  .navbar {
+    margin-top: -18px;
+  }
+  .navbar.sticky {
+    margin-top: -8px;
+  }
+  section {
+    width: 500px;
+  }
+  .home {
+    width: 500px;
+    background: url("https://i.postimg.cc/nhqk6r89/foto-nikah-5.jpg") no-repeat
+      center;
+    height: 120vh;
+    margin-top: -2px;
+  }
+  .about {
+    width: 500px;
+  }
+  .akad {
+    width: 500px;
+  }
+  .resepsi {
+    width: 500px;
+  }
+  footer {
+    width: 500px;
+  }
+
+  .foto-pria {
+    margin-left: 6%;
+    width: 150px;
+    height: 200px;
+  }
+  .pria h1,
+  .pria p {
+    margin-left: 30px;
+  }
+  .foto-wanita {
+    margin-left: 60%;
+    width: 150px;
+    height: 200px;
+  }
+  .wanita p,
+  .wanita h1 {
+    margin-right: 20px;
+  }
+  .foto1 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto1 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto2 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 {
+    margin-left: 5%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto3 img {
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 {
+    margin-left: 60%;
+    background-color: white;
+    height: 240px;
+    width: 180px;
+  }
+  .foto4 img {
+    height: 240px;
+    width: 180px;
+  }
+  body {
+    margin-right: -35px;
+    width: auto;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+.img {
+  margin-left: 40%;
+  position: relative;
+  align-items: center;
+}
+.prokes img {
+  margin-top: -500px;
+  height: 200px;
+  width: 320px;
+}
